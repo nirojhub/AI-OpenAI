@@ -40,6 +40,18 @@ chat_completion = client.chat.completions.create(
 
 print(chat_completion.choices[0].message.content)
 
+# Uncomment the following lines to test with a chat completion
+'''from openai import OpenAI
+client = OpenAI()
+
+response = client.responses.create(
+    model="gpt-4.1",
+    input="Write a one-sentence bedtime story about a unicorn."
+)
+
+print(response.output_text)'''
+
+
 # Uncomment the following lines to test with an image input
 '''response = client.chat.completions.create(
     model="llava",
